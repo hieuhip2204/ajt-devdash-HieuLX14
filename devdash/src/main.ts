@@ -32,7 +32,6 @@ import {
 import { debounce } from "./utils.js";
 import type { SortOption, ViewName } from "./types.js";
 
-// ─── Load products view ───────────────────────────────────────────────────────
 
 async function loadProducts(): Promise<void> {
   setProductsState({ status: "loading" });
@@ -52,7 +51,6 @@ async function loadProducts(): Promise<void> {
   }
 }
 
-// ─── Load users view ──────────────────────────────────────────────────────────
 
 async function loadUsers(): Promise<void> {
   setUsersState({ status: "loading" });
@@ -70,7 +68,7 @@ async function loadUsers(): Promise<void> {
   }
 }
 
-// ─── Detail views ─────────────────────────────────────────────────────────────
+
 
 async function openProductDetail(id: number): Promise<void> {
   showModalLoading();
@@ -94,7 +92,7 @@ async function openUserDetail(id: number): Promise<void> {
   }
 }
 
-// ─── Re-render current view after filter change ───────────────────────────────
+
 
 function rerenderCurrentView(): void {
   const { view } = getState();
@@ -105,7 +103,6 @@ function rerenderCurrentView(): void {
   }
 }
 
-// ─── Event wiring ─────────────────────────────────────────────────────────────
 
 function switchView(view: ViewName): void {
   setView(view);
@@ -196,7 +193,7 @@ function initEventListeners(): void {
   });
 }
 
-// ─── Bootstrap ────────────────────────────────────────────────────────────────
+
 
 function init(): void {
   initEventListeners();

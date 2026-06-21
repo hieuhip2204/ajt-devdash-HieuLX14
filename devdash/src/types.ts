@@ -1,4 +1,4 @@
-// ─── API Response Interfaces ─────────────────────────────────────────────────
+
 
 export interface Product {
   id: number;
@@ -58,7 +58,7 @@ export interface UsersResponse {
   limit: number;
 }
 
-// ─── App State — Discriminated Union ─────────────────────────────────────────
+
 
 export type AppState<T> =
   | { status: "idle" }
@@ -66,7 +66,6 @@ export type AppState<T> =
   | { status: "success"; data: T }
   | { status: "error"; message: string };
 
-// ─── View Types ───────────────────────────────────────────────────────────────
 
 export type ViewName = "products" | "users";
 
@@ -76,8 +75,6 @@ export type SortOption =
   | "name-desc"
   | "price-asc"
   | "price-desc";
-
-// ─── Utility Types in Use ────────────────────────────────────────────────────
 
 /** Lightweight card representation — only what the list view needs */
 export type ProductCard = Pick<

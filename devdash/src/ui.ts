@@ -1,7 +1,7 @@
 import type { Product, User, AppState, CategoriesResponse } from "./types.js";
 import { truncate, stars } from "./utils.js";
 
-// ─── DOM helpers ──────────────────────────────────────────────────────────────
+
 
 function el<K extends keyof HTMLElementTagNameMap>(id: K): HTMLElementTagNameMap[K] | null {
   return document.querySelector<HTMLElementTagNameMap[K]>(`#${id}`);
@@ -13,7 +13,7 @@ function getEl(id: string): HTMLElement {
   return node;
 }
 
-// ─── Loading / Error / Empty states ──────────────────────────────────────────
+
 
 function renderStatus(state: AppState<unknown>): string {
   switch (state.status) {
@@ -33,7 +33,6 @@ function renderStatus(state: AppState<unknown>): string {
   }
 }
 
-// ─── Product List ─────────────────────────────────────────────────────────────
 
 export function renderProductList(
   products: Product[],
@@ -83,8 +82,6 @@ function productCard(p: Product): string {
     </article>`;
 }
 
-// ─── User List ────────────────────────────────────────────────────────────────
-
 export function renderUserList(
   users: User[],
   onSelect: (id: number) => void
@@ -122,8 +119,6 @@ function userCard(u: User): string {
     </article>`;
 }
 
-// ─── Status overlays ──────────────────────────────────────────────────────────
-
 export function renderProductStatus(state: AppState<Product[]>): void {
   const html = renderStatus(state);
   if (html) getEl("content").innerHTML = html;
@@ -134,7 +129,6 @@ export function renderUserStatus(state: AppState<User[]>): void {
   if (html) getEl("content").innerHTML = html;
 }
 
-// ─── Category filter dropdown ─────────────────────────────────────────────────
 
 export function populateCategoryFilter(cats: CategoriesResponse[]): void {
   const select = document.getElementById("category-filter") as HTMLSelectElement | null;
@@ -155,8 +149,6 @@ export function showCategoryFilter(): void {
   const section = document.getElementById("filter-section");
   if (section) section.style.display = "";
 }
-
-// ─── Modal ────────────────────────────────────────────────────────────────────
 
 export function showModal(html: string): void {
   getEl("modal-body").innerHTML = html;
@@ -219,7 +211,6 @@ export function renderUserDetail(u: User): void {
     </div>`);
 }
 
-// ─── Nav active state ─────────────────────────────────────────────────────────
 
 export function setActiveNav(view: string): void {
   document.querySelectorAll<HTMLButtonElement>(".nav-btn").forEach((btn) => {

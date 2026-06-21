@@ -1,7 +1,7 @@
 import type { AppState, FilterState, SortOption, ViewName } from "./types.js";
 import type { Product, User, CategoriesResponse } from "./types.js";
 
-// ─── Global State ─────────────────────────────────────────────────────────────
+
 
 export interface DashState {
   view: ViewName;
@@ -19,7 +19,6 @@ const state: DashState = {
   filter: { query: "", category: "", sort: "default" },
 };
 
-// ─── Accessors ────────────────────────────────────────────────────────────────
 
 export function getState(): Readonly<DashState> {
   return state;
@@ -47,7 +46,7 @@ export function setFilter(patch: Partial<FilterState>): void {
   state.filter = { ...state.filter, ...patch };
 }
 
-// ─── Derived selectors ────────────────────────────────────────────────────────
+
 
 export function getFilteredProducts(): Product[] {
   const { products, filter } = state;

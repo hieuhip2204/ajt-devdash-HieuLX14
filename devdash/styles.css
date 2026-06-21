@@ -19,7 +19,7 @@
   --transition: 0.15s ease;
 }
 
-/* ─── Reset ──────────────────────────────────────────────────────────────────── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body { height: 100%; }
@@ -35,7 +35,6 @@ body {
 
 img { display: block; max-width: 100%; }
 
-/* ─── Topbar ──────────────────────────────────────────────────────────────────── */
 .topbar {
   display: flex;
   align-items: center;
@@ -157,7 +156,7 @@ img { display: block; max-width: 100%; }
   padding: 1.5rem;
 }
 
-/* ─── Cards ──────────────────────────────────────────────────────────────────── */
+
 .results-meta {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -309,7 +308,7 @@ img { display: block; max-width: 100%; }
   margin-top: 0.2rem;
 }
 
-/* ─── Status states ───────────────────────────────────────────────────────────── */
+
 .state-msg {
   display: flex;
   align-items: center;
@@ -343,7 +342,7 @@ img { display: block; max-width: 100%; }
   100% { background-position: -200% 0; }
 }
 
-/* ─── Modal ──────────────────────────────────────────────────────────────────── */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -513,7 +512,7 @@ body.modal-open { overflow: hidden; }
   to { transform: rotate(360deg); }
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────────── */
+
 @media (max-width: 640px) {
   .main-layout { flex-direction: column; }
   .sidebar { width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; }

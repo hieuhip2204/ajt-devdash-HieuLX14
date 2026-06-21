@@ -8,7 +8,7 @@ import type {
 
 const BASE = "https://dummyjson.com";
 
-// ─── Generic Fetch Helper ─────────────────────────────────────────────────────
+
 
 export async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url);
@@ -17,8 +17,6 @@ export async function fetchJson<T>(url: string): Promise<T> {
   }
   return res.json() as Promise<T>;
 }
-
-// ─── Products ─────────────────────────────────────────────────────────────────
 
 export async function fetchProducts(): Promise<ProductsResponse> {
   return fetchJson<ProductsResponse>(`${BASE}/products?limit=100`);
@@ -44,7 +42,7 @@ export async function fetchProductsWithCategories(): Promise<{
   return { products, categories };
 }
 
-// ─── Users ────────────────────────────────────────────────────────────────────
+
 
 export async function fetchUsers(): Promise<UsersResponse> {
   return fetchJson<UsersResponse>(`${BASE}/users?limit=100`);

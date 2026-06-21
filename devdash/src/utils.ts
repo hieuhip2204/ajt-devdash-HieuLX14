@@ -1,4 +1,3 @@
-// ─── Debounce (closure) ───────────────────────────────────────────────────────
 
 export function debounce<T extends (...args: unknown[]) => void>(
   fn: T,
@@ -15,7 +14,7 @@ export function debounce<T extends (...args: unknown[]) => void>(
   };
 }
 
-// ─── String helpers ───────────────────────────────────────────────────────────
+
 
 export function truncate(text: string, max: number): string {
   return text.length <= max ? text : `${text.slice(0, max)}…`;
