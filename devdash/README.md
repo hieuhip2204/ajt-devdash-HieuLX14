@@ -31,8 +31,8 @@ cd devdash
 npm install
 npm run dev
 ```
-
-https://ajt-devdash-hieu-lx-14-2h7h.vercel.app/
+github:  https://github.com/hieuhip2204/ajt-devdash-HieuLX14
+demo:    https://ajt-devdash-hieu-lx-14-2h7h.vercel.app/
 
 ## Build
 
