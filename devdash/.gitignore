@@ -1,0 +1,10 @@
+# node_modules
+node_modules/
+
+# log files
+*.log
+
+# hệ thống
+.DS_Store
+.env
+dist/
