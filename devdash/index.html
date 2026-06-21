@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevDash — Developer Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="topbar-brand">
+          <span class="brand-icon">⬡</span>
+          <span class="brand-name">DevDash</span>
+        </div>
+        <nav class="topbar-nav">
+          <button class="nav-btn active" data-view="products">Products</button>
+          <button class="nav-btn" data-view="users">Users</button>
+        </nav>
+      </header>
+
+      <main class="main-layout">
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-section">
+            <label class="sidebar-label">Search</label>
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="Filter items…"
+            />
+          </div>
+
+          <div class="sidebar-section" id="filter-section">
+            <label class="sidebar-label">Category</label>
+            <select id="category-filter" class="filter-select">
+              <option value="">All categories</option>
+            </select>
+          </div>
+
+          <div class="sidebar-section">
+            <label class="sidebar-label">Sort by</label>
+            <select id="sort-select" class="filter-select">
+              <option value="default">Default</option>
+              <option value="name-asc">Name A→Z</option>
+              <option value="name-desc">Name Z→A</option>
+              <option value="price-asc">Price low→high</option>
+              <option value="price-desc">Price high→low</option>
+            </select>
+          </div>
+        </aside>
+
+        <section class="content" id="content">
+          <!-- Rendered by TypeScript -->
+        </section>
+      </main>
+
+      <!-- Detail modal -->
+      <div class="modal-overlay hidden" id="modal-overlay">
+        <div class="modal" id="modal">
+          <button class="modal-close" id="modal-close">✕</button>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
